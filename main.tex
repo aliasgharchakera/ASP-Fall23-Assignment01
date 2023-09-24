@@ -140,8 +140,8 @@
             \end{center}
 
             The green shaded region corresponds to the set $4 < t_1 < t_2$ and the red
-            shaded region corresponds to the set $t_1 < t_2 < 1$, and the union of
-            these two regions is the set $A \cap B$.
+            shaded region corresponds to the set $t_1 < t_2 < 1$, and the union of these
+            two regions is the set $A \cap B$.
         \end{solution}
     \end{parts}
 
@@ -151,15 +151,56 @@
 
         \part
         Find the sample space $S$ and the range if $R$, $S_R$;
+        \begin{solution}
+            The sample space $S$ is the set of all points inside the circular target of radius 2. The range of $S_R$ is the set of all real numbers between 0 and 2, inclusive.
 
+            $S_R = [0, 2]$
+
+            $S = \{(x, y) | x^2 + y^2 \leq 4\}$
+
+            \begin{center}
+                \includegraphics[width=0.3\textwidth]{images/4a.png}
+            \end{center}
+        \end{solution}
         \part
         Show the mapping from $S$ to $S_R$;
+        \begin{solution}
+            The mapping from $S$ to $S_R$ is the function $f(x, y) = \sqrt{x^2 + y^2}$.
+
+        \end{solution}
 
         \part
         The ``bull's eye'' is the central disk in the target of radius 0.25. Find the event $A$ in $S_R$ corresponding to ``dart hits the bull's eye.'' Find the equivalent event in S and $P(A)$.
+        \begin{solution}
+            The event $A$ in $S_R$ corresponding to ``dart hits the bull's eye'' is the set of all real numbers between 0 and 0.25, inclusive.
 
+            $A = [0, 0.25]$
+
+            \begin{center}
+                \includegraphics[width=0.3\textwidth]{images/4c.png}
+            \end{center}
+            The equivalent event in $S$ is the set of all points inside the circular target of radius 0.25.
+
+            $A = \{(x, y) | x^2 + y^2 \leq 0.25\}$
+
+            $P(A) = \dfrac{0.25^2 \pi}{2^2 \pi} = \dfrac{1}{16}$
+        \end{solution}
         \part
         Find and plot the cdf of $R$.
+        \begin{solution}
+            The cdf of $R$ is given by
+            \begin{equation*}
+                F_R(r) = \begin{cases}
+                    0,              & r < 0,         \\
+                    \dfrac{r^2}{4}, & 0 \le r \le 2, \\
+                    1,              & r > 2
+                \end{cases}
+            \end{equation*}
+
+            \begin{center}
+                \includegraphics[width=0.5\textwidth]{images/4d.png}
+            \end{center}
+        \end{solution}
     \end{parts}
 
     \newpage
@@ -169,7 +210,27 @@
     \begin{parts}
 
         \part Find the mean and variance of $X$.
-        \part Find the mean and variance of $Y = -2 X^22 + 3$.
+        \begin{solution}
+            The mean of $X$ is given by
+            \begin{align*}
+                \mu_X & = \sum_{x \in S_X} x P(X = x) \\
+                     & = \frac{1}{8} \sum_{x = -3}^4 x \\
+                     & = \frac{1}{8} \left(-3 + -2 + \dots + 3 + 4\right) \\
+                     & = \frac{1}{8} \left(-3 + -2 + -1 + 0 + 1 + 2 + 3 + 4\right) \\
+                     & = \frac{1}{8} \left(4\right) \\
+                     & = \frac{1}{2}
+            \end{align*}
+
+            The variance of $X$ is given by
+            \begin{align*}
+                \sigma_X^2 & = \sum_{x \in S_X} (x - \mu_X)^2 P(X = x) \\
+                           & = \frac{1}{8} \sum_{x = -3}^4 (x - \mu_X)^2 \\
+                           & = \frac{1}{8} \left((-3 - \mu_X)^2 + (-2 - \mu_X)^2 + \dots + (3 - \mu_X)^2 + (4 - \mu_X)^2\right) \\
+                           & = \frac{1}{8} \left((-3 - \frac{1}{2})^2 + (-2 - \frac{1}{2})^2 + (-1 - \frac{1}{2})^2 + (0 - \frac{1}{2})^2 + (1 - \frac{1}{2})^2 + (2 - \frac{1}{2})^2 + (3 - \frac{1}{2})^2 + (4 - \frac{1}{2})^2\right) \\
+                \end{align*}
+
+        \end{solution}
+        \part Find the mean and variance of $Y = -2 X^2 + 3$.
         \part Find the mean and variance of $Z = \cos (\pi X/8)$.
         \part Find the mean and variance of $W = \cos^2  (\pi X/8)$.
     \end{parts}
