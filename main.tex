@@ -240,24 +240,16 @@
             \begin{align*}
                 \mu_Y & = \sum_{y \in S_Y} y P(Y = y)                                                                  \\
                       & = \frac{1}{8} \sum_{x = -3}^4 (-2 x^2 + 3)                                                     \\
-                      & = \frac{1}{8} \left(-2 (-3)^2 + 3 + -2 (-2)^2 + 3 + \dots + -2 (3)^2 + 3 + -2 (4)^2 + 3\right) \\
-                      & = \frac{1}{8} \left(-2 (9) + 3 + -2 (4) + 3 + \dots + -2 (9) + 3 + -2 (16) + 3\right)          \\
-                      & = \frac{1}{8} \left(-18 + 3 + -8 + 3 + \dots + -18 + 3 + -32 + 3\right)                        \\
-                      & = \frac{1}{8} \left(-15 + -5 + -5 + -5 + -5 + -5 + -5 + -5\right)                              \\
-                      & = \frac{1}{8} \left(-50\right)                                                                 \\
-                      & = -\frac{25}{4}
+                      & = \frac{1}{8} \left(-2 (-3)^2 + 3 + -2 (-2)^2 + 3 + \dots + -2 (3)^2 + 3 + -2 (4)^2 + 3\right) \\                                                                           \\
+                      & = -8
             \end{align*}
 
             The variance of $Y$ is given by
             \begin{align*}
                 \sigma_Y^2 & = \sum_{y \in S_Y} (y - \mu_Y)^2 P(Y = y)                                                                    \\
                            & = \frac{1}{8} \sum_{x = -3}^4 (-2 x^2 + 3 - \mu_Y)^2                                                         \\
-                           & = \frac{1}{8} ((-2 (-3)^2 + 3 - \mu_Y)^2 + (-2 (-2)^2 + 3 - \mu_Y)^2 + \dots +                               \\
-                           & \qquad (-2 (3)^2 + 3 - \mu_Y)^2 + (-2 (4)^2 + 3 - \mu_Y)^2)                                                  \\
-                           & = \frac{1}{8} ((-2 (9) + 3 + \frac{25}{4})^2 + (-2 (4) + 3 + \frac{25}{4})^2 + \dots + (-2 (9) + 3 +         \\
-                           & \qquad \frac{25}{4})^2 + (-2 (16) + 3 + \frac{25}{4})^2)                                                     \\
-                           & = \frac{1}{8} ((-18 + 3 + \frac{25}{4})^2 + (-8 + 3 + \frac{25}{4})^2 + \dots + (-18 + 3 + \frac{25}{4})^2 + \\
-                           & \qquad (-32 + 3 + \frac{25}{4})^2)
+                           & = \frac{1}{8} ((-2 (-3)^2 + 3 - \mu_Y)^2 + \dots + (-2 (4)^2 + 3 - \mu_Y)^2)                                                  \\
+                           & = 105
             \end{align*}
         \end{solution}
         \part Find the mean and variance of $Z = \cos (\pi X/8)$.
