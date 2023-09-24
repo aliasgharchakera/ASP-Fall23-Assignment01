@@ -412,8 +412,8 @@
 
             \begin{align*}
                 F_Z(z) & = \begin{cases}
-                               p \left[\frac{e^{\lambda z}}{\lambda}\right]_{-\infty}^{z},                                                                & z < 0,  \\
-                               p \left[\frac{e^{\lambda z}}{\lambda}\right]_{-\infty}^{0} + (1 - p) \left[-\frac{e^{-\lambda z}}{\lambda}\right]_{0}^{z}, & z \ge 0
+                               p e^{\lambda z},                                                                & z < 0,  \\
+                               p e^{\lambda z} + (1 - p) (1 - e^{-\lambda z}), & z \ge 0
                            \end{cases}
             \end{align*}
         \end{solution}
