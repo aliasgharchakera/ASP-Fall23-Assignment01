@@ -213,26 +213,86 @@
         \begin{solution}
             The mean of $X$ is given by
             \begin{align*}
-                \mu_X & = \sum_{x \in S_X} x P(X = x) \\
-                     & = \frac{1}{8} \sum_{x = -3}^4 x \\
-                     & = \frac{1}{8} \left(-3 + -2 + \dots + 3 + 4\right) \\
-                     & = \frac{1}{8} \left(-3 + -2 + -1 + 0 + 1 + 2 + 3 + 4\right) \\
-                     & = \frac{1}{8} \left(4\right) \\
-                     & = \frac{1}{2}
+                \mu_X & = \sum_{x \in S_X} x P(X = x)                               \\
+                      & = \frac{1}{8} \sum_{x = -3}^4 x                             \\
+                      & = \frac{1}{8} \left(-3 + -2 + \dots + 3 + 4\right)          \\
+                      & = \frac{1}{8} \left(-3 + -2 + -1 + 0 + 1 + 2 + 3 + 4\right) \\
+                      & = \frac{1}{8} \left(4\right)                                \\
+                      & = \frac{1}{2}
             \end{align*}
 
             The variance of $X$ is given by
             \begin{align*}
-                \sigma_X^2 & = \sum_{x \in S_X} (x - \mu_X)^2 P(X = x) \\
-                           & = \frac{1}{8} \sum_{x = -3}^4 (x - \mu_X)^2 \\
-                           & = \frac{1}{8} \left((-3 - \mu_X)^2 + (-2 - \mu_X)^2 + \dots + (3 - \mu_X)^2 + (4 - \mu_X)^2\right) \\
+                \sigma_X^2 & = \sum_{x \in S_X} (x - \mu_X)^2 P(X = x)                                                                                                                                                                   \\
+                           & = \frac{1}{8} \sum_{x = -3}^4 (x - \mu_X)^2                                                                                                                                                                 \\
+                           & = \frac{1}{8} \left((-3 - \mu_X)^2 + (-2 - \mu_X)^2 + \dots + (3 - \mu_X)^2 + (4 - \mu_X)^2\right)                                                                                                          \\
                            & = \frac{1}{8} \left((-3 - \frac{1}{2})^2 + (-2 - \frac{1}{2})^2 + (-1 - \frac{1}{2})^2 + (0 - \frac{1}{2})^2 + (1 - \frac{1}{2})^2 + (2 - \frac{1}{2})^2 + (3 - \frac{1}{2})^2 + (4 - \frac{1}{2})^2\right) \\
-                \end{align*}
+                           & = \frac{1}{8} \left((-\frac{7}{2})^2 + (-\frac{5}{2})^2 + (-\frac{3}{2})^2 + (-\frac{1}{2})^2 + (\frac{1}{2})^2 + (\frac{3}{2})^2 + (\frac{5}{2})^2 + (\frac{7}{2})^2\right)                                \\
+                           & = \frac{1}{8} \left(\frac{49}{4} + \frac{25}{4} + \frac{9}{4} + \frac{1}{4} + \frac{1}{4} + \frac{9}{4} + \frac{25}{4} + \frac{49}{4}\right)                                                                \\
+                           & = \frac{1}{8} \left(\frac{168}{4}\right) = \frac{42}{8} = \frac{21}{4}                                                                                                                                      \\
+            \end{align*}
 
         \end{solution}
         \part Find the mean and variance of $Y = -2 X^2 + 3$.
+        \begin{solution}
+            The mean of $Y$ is given by
+            \begin{align*}
+                \mu_Y & = \sum_{y \in S_Y} y P(Y = y)                                                                  \\
+                      & = \frac{1}{8} \sum_{x = -3}^4 (-2 x^2 + 3)                                                     \\
+                      & = \frac{1}{8} \left(-2 (-3)^2 + 3 + -2 (-2)^2 + 3 + \dots + -2 (3)^2 + 3 + -2 (4)^2 + 3\right) \\
+                      & = \frac{1}{8} \left(-2 (9) + 3 + -2 (4) + 3 + \dots + -2 (9) + 3 + -2 (16) + 3\right)          \\
+                      & = \frac{1}{8} \left(-18 + 3 + -8 + 3 + \dots + -18 + 3 + -32 + 3\right)                        \\
+                      & = \frac{1}{8} \left(-15 + -5 + -5 + -5 + -5 + -5 + -5 + -5\right)                              \\
+                      & = \frac{1}{8} \left(-50\right)                                                                 \\
+                      & = -\frac{25}{4}
+            \end{align*}
+
+            The variance of $Y$ is given by
+            \begin{align*}
+                \sigma_Y^2 & = \sum_{y \in S_Y} (y - \mu_Y)^2 P(Y = y)                                                                                                                         \\
+                           & = \frac{1}{8} \sum_{x = -3}^4 (-2 x^2 + 3 - \mu_Y)^2                                                                                                              \\
+                           & = \frac{1}{8} \left((-2 (-3)^2 + 3 - \mu_Y)^2 + (-2 (-2)^2 + 3 - \mu_Y)^2 + \dots + (-2 (3)^2 + 3 - \mu_Y)^2 + (-2 (4)^2 + 3 - \mu_Y)^2\right)                    \\
+                           & = \frac{1}{8} \left((-2 (9) + 3 + \frac{25}{4})^2 + (-2 (4) + 3 + \frac{25}{4})^2 + \dots + (-2 (9) + 3 + \frac{25}{4})^2 + (-2 (16) + 3 + \frac{25}{4})^2\right) \\
+                           & = \frac{1}{8} \left((-18 + 3 + \frac{25}{4})^2 + (-8 + 3 + \frac{25}{4})^2 + \dots + (-18 + 3 + \frac{25}{4})^2 + (-32 + 3 + \frac{25}{4})^2\right)
+            \end{align*}
+        \end{solution}
         \part Find the mean and variance of $Z = \cos (\pi X/8)$.
+        \begin{solution}
+            The mean of $Z$ is given by
+            \begin{align*}
+                \mu_Z & = \sum_{z \in S_Z} z P(Z = z)                                                                                                                                                                                                                                                 \\
+                      & = \frac{1}{8} \sum_{x = -3}^4 \cos \left(\frac{\pi x}{8}\right)                                                                                                                                                                                                               \\
+                      & = \frac{1}{8} \left(\cos \left(\frac{\pi (-3)}{8}\right) + \cos \left(\frac{\pi (-2)}{8}\right) + \dots + \cos \left(\frac{\pi (3)}{8}\right) + \cos \left(\frac{\pi (4)}{8}\right)\right)                                                                                    \\
+                      & = \frac{1}{8} \left(\cos \left(\frac{-3 \pi}{8}\right) + \cos \left(\frac{-2 \pi}{8}\right) + \dots + \cos \left(\frac{3 \pi}{8}\right) + \cos \left(\frac{4 \pi}{8}\right)\right)                                                                                            \\
+                      & = \frac{1}{8} \left(\cos \left(\frac{-3 \pi}{8}\right) + \cos \left(\frac{-\pi}{4}\right) + \dots + \cos \left(\frac{3 \pi}{8}\right) + \cos \left(\frac{\pi}{2}\right)\right)                                                                                                \\
+                      & = \frac{1}{8} \left(\cos \left(\frac{-3 \pi}{8}\right) + \cos \left(\frac{-\pi}{4}\right) + \cos \left(\frac{-\pi}{8}\right) + \cos \left(\frac{\pi}{8}\right) + \cos \left(\frac{\pi}{4}\right) + \cos \left(\frac{3 \pi}{8}\right) + \cos \left(\frac{\pi}{2}\right)\right) \\
+                      & = \frac{1}{8} \left(\cos \left(\frac{-3 \pi}{8}\right) + \cos \left(\frac{-\pi}{8}\right) + \cos \left(\frac{\pi}{8}\right) + \cos \left(\frac{3 \pi}{8}\right) + \cos \left(\frac{\pi}{2}\right)\right)                                                                      \\
+                      & = \frac{1}{8} \left(\cos \left(\frac{-3 \pi}{8}\right) + \cos \left(\frac{-\pi}{8}\right) + \cos \left(\frac{3 \pi}{8}\right) + \cos \left(\frac{\pi}{2}\right)\right)                                                                                                        \\
+                      & = \frac{1}{8} \left(\cos \left(\frac{-3 \pi}{8}\right) + \cos \left(\frac{3 \pi}{8}\right) + \cos \left(\frac{\pi}{2}\right)\right)                                                                                                                                           \\
+                      & = \frac{1}{8} \left(\cos \left(\frac{-3 \pi}{8}\right) + \cos \left(\frac{3 \pi}{8}\right) + 0\right)                                                                                                                                                                         \\
+                      & = \frac{1}{8} \left(\cos \left(\frac{-3 \pi}{8}\right) + \cos \left(\frac{3 \pi}{8}\right)\right)                                                                                                                                                                             \\
+                      & = \frac{1}{8} \left(\cos \left(\frac{-3 \pi}{8}\right) + \cos \left(\frac{3 \pi}{8}\right)\right)                                                                                                                                                                             \\
+                      & = 0.095670858
+            \end{align*}
+        \end{solution}
         \part Find the mean and variance of $W = \cos^2  (\pi X/8)$.
+        \begin{solution}
+            The mean of $W$ is given by
+            \begin{align*}
+                \mu_W & = \sum_{w \in S_W} w P(W = w)                                                                                                                                                                                                                                                 \\
+                      & = \frac{1}{8} \sum_{x = -3}^4 \cos^2 \left(\frac{\pi x}{8}\right)                                                                                                                                                                                                               \\
+                      & = \frac{1}{8} \left(\cos^2 \left(\frac{\pi (-3)}{8}\right) + \cos^2 \left(\frac{\pi (-2)}{8}\right) + \dots + \cos^2 \left(\frac{\pi (3)}{8}\right) + \cos^2 \left(\frac{\pi (4)}{8}\right)\right)                                                                                    \\
+                      & = \frac{1}{8} \left(\cos^2 \left(\frac{-3 \pi}{8}\right) + \cos^2 \left(\frac{-2 \pi}{8}\right) + \dots + \cos^2 \left(\frac{3 \pi}{8}\right) + \cos^2 \left(\frac{4 \pi}{8}\right)\right)                                                                                            \\
+                      & = \frac{1}{8} \left(\cos^2 \left(\frac{-3 \pi}{8}\right) + \cos^2 \left(\frac{-\pi}{4}\right) + \dots + \cos^2 \left(\frac{3 \pi}{8}\right) + \cos^2 \left(\frac{\pi}{2}\right)\right)                                                                                                \\
+                      & = \frac{1}{8} \left(\cos^2 \left(\frac{-3 \pi}{8}\right) + \cos^2 \left(\frac{-\pi}{4}\right) + \cos^2 \left(\frac{-\pi}{8}\right) + \cos^2 \left(\frac{\pi}{8}\right) + \cos^2 \left(\frac{\pi}{4}\right) + \cos^2 \left(\frac{3 \pi}{8}\right) + \cos^2 \left(\frac{\pi}{2}\right)\right) \\
+                      & = \frac{1}{8} \left(\cos^2 \left(\frac{-3 \pi}{8}\right) + \cos^2 \left(\frac{-\pi}{8}\right) + \cos^2 \left(\frac{\pi}{8}\right) + \cos^2 \left(\frac{3 \pi}{8}\right) + \cos^2 \left(\frac{\pi}{2}\right)\right)                                                                      \\
+                        & = \frac{1}{8} \left(\cos^2 \left(\frac{-3 \pi}{8}\right) + \cos^2 \left(\frac{-\pi}{8}\right) + \cos^2 \left(\frac{3 \pi}{8}\right) + \cos^2 \left(\frac{\pi}{2}\right)\right)                                                                                                        \\
+                        & = \frac{1}{8} \left(\cos^2 \left(\frac{-3 \pi}{8}\right) + \cos^2 \left(\frac{3 \pi}{8}\right) + \cos^2 \left(\frac{\pi}{2}\right)\right)                                                                                                                                           \\
+                        & = \frac{1}{8} \left(\cos^2 \left(\frac{-3 \pi}{8}\right) + \cos^2 \left(\frac{3 \pi}{8}\right) + 0\right)                                                                                                                                                                         \\
+                        & = \frac{1}{8} \left(\cos^2 \left(\frac{-3 \pi}{8}\right) + \cos^2 \left(\frac{3 \pi}{8}\right)\right)                                                                                                                                                                             \\
+                        & = 0.036611652                                                                                                                                                                           \\
+                        \end{align*}
+        \end{solution}
     \end{parts}
 
     \question
@@ -244,9 +304,64 @@
         \end{cases}
     \end{equation*}
     \begin{parts}
-
         \part Find c and plot the pdf and the cdf of X.
+        \begin{solution}
+            Since $f_X(x)$ is a pdf, it must satisfy the following condition:
+            \begin{align*}
+                \int_{-\infty}^{\infty} f_X(x) dx                    & = 1 \\
+                \int_{-\infty}^{\infty} c x (1 - x^2) dx             & = 1 \\
+                c \int_{0}^{1} x (1 - x^2) dx                        & = 1 \\
+                c \left[\frac{x^2}{2} - \frac{x^4}{4}\right]_{0}^{1} & = 1 \\
+                c \left[\frac{1}{2} - \frac{1}{4}\right]             & = 1 \\
+                c \left[\frac{1}{4}\right]                           & = 1 \\
+                c                                                    & = 4
+            \end{align*}
+
+            The pdf of $X$ is given by
+            \begin{align*}
+                f_X(x) & = \begin{cases}
+                               4 x (1 - x^2), & 0 \le x \le 1,    \\
+                               0,             & \text{elsewhere}.
+                           \end{cases}
+            \end{align*}
+
+            The cdf of $X$ is given by
+            \begin{align*}
+                F_X(x) & = \int_{-\infty}^{x} f_X(x) dx                 \\
+                       & = \int_{-\infty}^{x} 4 x (1 - x^2) dx          \\
+                       & = \left[2 x^2 - \frac{4 x^4}{4}\right]_{0}^{x} \\
+                       & = \left[2 x^2 - x^4\right]_{0}^{x}             \\
+                       & = 2 x^2 - x^4
+            \end{align*}
+
+            \begin{center}
+                \includegraphics[width=0.5\textwidth]{images/6a.png}
+            \end{center}
+
+            The blue curve is the pdf of $X$ and the red curve is the cdf of $X$.
+
+        \end{solution}
         \part Find $P(0 \le X \le 0.5)$, $P(X = 1)$, and $P(0.25 \le X \le 0.5)$.
+        \begin{solution}
+            \begin{align*}
+                P(0 \le X \le 0.5) & = F_X(0.5) - F_X(0)                     \\
+                                   & = 2 (0.5)^2 - (0.5)^4 - 2 (0)^2 - (0)^4 \\
+                                   & = 0.5
+            \end{align*}
+
+            \begin{align*}
+                P(X = 1) & = F_X(1) - F_X(1)                   \\
+                         & = 2 (1)^2 - (1)^4 - 2 (1)^2 - (1)^4 \\
+                         & = 0
+            \end{align*}
+
+            \begin{align*}
+                P(0.25 \le X \le 0.5) & = F_X(0.5) - F_X(0.25)                        \\
+                                      & = 2 (0.5)^2 - (0.5)^4 - 2 (0.25)^2 - (0.25)^4 \\
+                                      & = 0.5 - 0.140625                              \\
+                                      & = 0.359375
+            \end{align*}
+        \end{solution}
     \end{parts}
 
     \question
@@ -258,6 +373,14 @@
         $$
             f_Z(z) = p f_X(z) + (1-p) f_Y(z).
         $$
+        \begin{solution}
+            \begin{align*}
+                f_Z(z) & = P[Z = z]                                                    \\
+                       & = P[Z = z \mid X = z] P[X = z] + P[Z = z \mid Y = z] P[Y = z] \\
+                       & = p P[X = z] + (1 - p) P[Y = z]                               \\
+                       & = p f_X(z) + (1 - p) f_Y(z)
+            \end{align*}
+        \end{solution}
         \part Calculate the cdf of two-sided exponential RV that has PDF given by
         \begin{equation*}
             f_Z(z) = \begin{cases}
@@ -266,6 +389,36 @@
             \end{cases}
         \end{equation*}
         where $\lambda > 0$ and $0 < p < 1$.
+        \begin{solution}
+            \begin{align*}
+                F_Z(z) & = \int_{-\infty}^{z} f_Z(z) dz                                                                               \\
+                       & = \begin{cases}
+                               \int_{-\infty}^{z} p \lambda e^{\lambda z} dz,                                                  & z < 0,   \\
+                               \int_{-\infty}^{0} p \lambda e^{\lambda z} dz + \int_{0}^{z} (1 - p) \lambda e^{-\lambda z} dz, & z \ge 0.
+                           \end{cases}
+            \end{align*}
+
+            \begin{align*}
+                F_Z(z) & = \begin{cases}
+                               p \lambda \int_{-\infty}^{z} e^{\lambda z} dz,                                                  & z < 0,   \\
+                               p \lambda \int_{-\infty}^{0} e^{\lambda z} dz + (1 - p) \lambda \int_{0}^{z} e^{-\lambda z} dz, & z \ge 0.
+                           \end{cases}
+            \end{align*}
+
+            \begin{align*}
+                F_Z(z) & = \begin{cases}
+                               p \lambda \left[\frac{e^{\lambda z}}{\lambda}\right]_{-\infty}^{z},                                                                        & z < 0,   \\
+                               p \lambda \left[\frac{e^{\lambda z}}{\lambda}\right]_{-\infty}^{0} + (1 - p) \lambda \left[-\frac{e^{-\lambda z}}{\lambda}\right]_{0}^{z}, & z \ge 0.
+                           \end{cases}
+            \end{align*}
+
+            \begin{align*}
+                F_Z(z) & = \begin{cases}
+                               p \left[\frac{e^{\lambda z}}{\lambda}\right]_{-\infty}^{z},                                                                & z < 0,  \\
+                               p \left[\frac{e^{\lambda z}}{\lambda}\right]_{-\infty}^{0} + (1 - p) \left[-\frac{e^{-\lambda z}}{\lambda}\right]_{0}^{z}, & z \ge 0
+                           \end{cases}
+            \end{align*}
+        \end{solution}
     \end{parts}
 \end{questions}
 
